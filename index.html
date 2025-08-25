@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Landing</title>
+  <meta name="description"
+    content="Адаптивная вёрстка по макету: прилипшая шапка, форма заказа, шаги, анимации. БЭМ, SCSS." />
+  <link rel="preload" href="css/styles.min.css" as="style" />
+  <link rel="stylesheet" href="css/styles.min.css" />
+</head>
+
+<body class="page">
+  <!-- Header -->
+  <header class="header js-header" role="banner">
+    <div class="container header__inner">
+      <a class="logo header__logo" href="#" aria-label="На главную">
+        <span class="logo__title">LOREMIPSUM</span><span class="logo__dot">.NET</span>
+      </a>
+
+      <nav class="nav header__nav" aria-label="Главная навигация">
+        <button class="nav__toggle js-nav-toggle" aria-controls="main-menu" aria-expanded="false">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <ul class="nav__list" id="main-menu">
+          <li class="nav__item"><a class="nav__link" href="#business">Бизнес</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
+          <li class="nav__item"><a class="nav__link" href="#pricing">Цены</a></li>
+          <li class="nav__item"><a class="nav__link" href="#order">Оформить заказ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero -->
+    <section class="hero" id="business">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="hero__title-accent hero__title-accent--blue">LOREM IPSUM</span> DOLOR SIT<br />
+            AMETCONSECTETUR <span class="hero__title-accent hero__title-accent--blue">ADIPISCING</span>
+          </h1>
+          <h2 class="hero__list-title">At vero eos et accusamus et iusto odio dignissimos ducimus!</h2>
+          <ul class="list hero__list">
+            <li class="hero__list__item">Totam rem aperiam eaque ipsa</li>
+            <li class="hero__list__item">Sit voluptatem accusantium doloremque laudantium</li>
+            <li class="hero__list__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+          </ul>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#order">ЗАКАЗАТЬ</a>
+            <a class="btn btn--ghost" href="#about">ПОДРОБНЕЕ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="steps" aria-labelledby="steps-title">
+      <div class="container">
+        <h2 class="steps__title" id="steps-title">Оформление <span class="steps__title-accent">заказа</span></h2>
+        <p class="steps__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+
+        <ol class="steps__list" role="list">
+          <li class="steps__item">
+            <span class="steps__icon" aria-hidden="true">
+              <img src="/img/search.png" alt="Описание картинки">
+            </span>
+            <span class="steps__text">Lorem ipsum dolor sit amet</span>
+          </li>
+          <li class="steps__divider"></li>
+          <li class="steps__item">
+            <span class="steps__icon" aria-hidden="true">
+              <img src="/img/percent.png" alt="Описание картинки">
+            </span>
+            <span class="steps__text">Consectetur adipisicing elit</span>
+          </li>
+          <li class="steps__divider"></li>
+          <li class="steps__item">
+            <span class="steps__icon" aria-hidden="true">
+              <img src="/img/file.png" alt="Описание картинки">
+            </span>
+            <span class="steps__text">Sed do eiusmod tempor</span>
+          </li>
+          <li class="steps__divider"></li>
+          <li class="steps__item">
+            <span class="steps__icon" aria-hidden="true">
+              <img src="/img/message.png" alt="Описание картинки">
+            </span>
+            <span class="steps__text">Elit ullam dolore eu fugiat</span>
+          </li>
+          <li class="steps__divider"></li>
+          <li class="steps__item">
+            <span class="steps__icon" aria-hidden="true">
+              <img src="/img/money.png" alt="Описание картинки">
+            </span>
+            <span class="steps__text">Executor sint occaecat cupidatat</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="container order__inner">
+        <h2 class="order__title" id="order-title">Заполните форму</h2>
+
+        <form class="form order__form" action="#" method="post" enctype="multipart/form-data" novalidate>
+          <div class="form__row">
+            <label class="form__field form__field--select">
+              <select class="form__control" name="system_type" required>
+                <option value="" selected disabled>Выберите тип системы</option>
+                <option value="crm">Sed ut perspiciatis</option>
+                <option value="site">Nemo enim ipsam</option>
+                <option value="erp">Et harum quidem</option>
+                <option value="site-2">Temporibus autem</option>
+                <option value="erp-2">Itaque earum rerum</option>
+              </select>
+            </label>
+
+            <label class="form__field">
+              <input class="form__control" type="email" name="email" placeholder="Ваш e-mail" required />
+            </label>
+            <label class="form__field">
+
+              <input class="form__control" type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+          </div>
+
+          <div class="form__row-2">
+            <label class="form__field form__field--range">
+              <div class="form__range-text">
+                <span>Sed ut perspiciatis, unde omnis iste natus</span>
+                <span class="range-value">75%</span>
+              </div>
+              <input class="form__control" type="range" name="readiness" min="0" max="100" value="75" />
+            </label>
+
+            <label class="form__field form__field--file">
+              <input class="form__control" type="file" name="attachment" />
+              <span class="form__label">
+                <img src="img/file-2.png" alt="" class="form__icon" />
+                <span class="form__file-text">Прикрепить файл</span>
+              </span>
+            </label>
+
+          </div>
+
+          <button class="btn btn--primary form__submit" type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="about">
+    <div class="container footer__inner">
+      <div class="footer__copyright">
+        © 2018 «LoremIpsum.net» Все права защищены.</div>
+      <div class="footer__payments" aria-label="Платёжные системы">
+        <div class="devider"></div>
+        <div class="payment-block">
+          <img class="wallet" src="/img/qiwi.png" alt="qiwi" />
+          <span class="payment payment--qw" aria-label="Qiwi wallet">Qiwi wallet</span>
+        </div>
+        <div class="payment-block">
+          <img class="wallet" src="/img/ym.png" alt="qiwi" />
+          <span class="payment payment--ym" aria-label="Yandex Money">Yandex Money</span>
+        </div>
+        <div class="payment-block">
+          <img class="wallet" src="/img/wm.png" alt="qiwi" />
+          <span class="payment payment--wm" aria-label="Web Money">Web Money</span>
+        </div>
+        <div class="devider"></div>
+      </div>
+
+      <div class="footer__contacts">
+        <div class="payment-block">
+          <img class="wallet" src="/img/mail.png" alt="mail" />
+          <a class="footer__link" href="mailto:info@example.com">info@example.com</a>
+        </div>
+        <div class="payment-block">
+          <img class="wallet" src="/img/vk.png" alt="vk" />
+          <a class="footer__link" href="https://vk.com/yourpage" target="_blank" rel="noopener noreferrer">Мы
+            вконтакте</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
